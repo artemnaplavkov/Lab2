@@ -9,3 +9,4 @@ struct notebook {
 };
 
 void create(struct notebook** arr, int* n);
+void write(struct notebook* arr, int n);

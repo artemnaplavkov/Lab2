@@ -17,7 +17,7 @@ int main() {
 			break;
 		case 2:
 			create(&arr, &n);
-			printf("write\n");
+			write(arr, n);
 			break;
 		case 3:
 			printf("print\n");
