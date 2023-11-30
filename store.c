@@ -7,11 +7,11 @@
 void create(struct notebook **arr, int *n) {
 	if (*n > 0) {
 		free(*arr);
-		n = 0;
+		*n = 0;
 	}
 	printf("notebooks number = ");
 	scanf("%d", n);
-	if (n < 1)
+	if (*n < 1)
 		return;
 	*arr = (struct notebook*)calloc(*n, sizeof(struct notebook));
 	for (int i = 0; i < *n; i++) {
@@ -45,13 +45,13 @@ void write(struct notebook* arr, int n) {
 void read(struct notebook** arr, int* n) {
 	if (*n > 0) {
 		free(*arr);
-		n = 0;
+		*n = 0;
 	}
 	FILE* f = fopen("notebooks.txt", "r");
 	if (!f)
 		return;
 	fscanf(f, "%d", n);
-	if (n < 1)
+	if (*n < 1)
 		return;
 	*arr = (struct notebook*)calloc(*n, sizeof(struct notebook));
 	for (int i = 0; i < *n; i++)
