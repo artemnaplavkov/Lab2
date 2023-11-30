@@ -13,17 +13,17 @@ int main() {
 		scanf("%d", &key);
 		switch (key) {
 		case 1:
-			printf("read\n");
+			read(&arr, &n);
 			break;
 		case 2:
 			create(&arr, &n);
 			write(arr, n);
 			break;
 		case 3:
-			printf("print\n");
+			print(arr, n);
 			break;
 		case 4:
-			printf("find\n");
+			find(arr, n);
 			break;
 		default:
 			printf("bye");
